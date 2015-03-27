@@ -9,12 +9,15 @@
 
 #define LOOP_DELAY       5000
 
+#define SERVO_POWER         2
+
 Servo myservo;
 
 void setup() {
+  pinMode(2, OUTPUT);
+  digitalWrite(SERVO_POWER, HIGH);
   myservo.attach( SERVO_PIN );
   
-  //
   Serial.begin(9600); 
 }
 
